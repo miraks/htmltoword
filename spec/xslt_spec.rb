@@ -35,4 +35,9 @@ describe "XSLT" do
     html = '<html><head></head><body><div><p>Hello</p><details><summary>Title</summary><p>Second</p><details></div></body></html>'
     compare_resulting_wordml_with_expected(html, "<w:body> <w:p> <w:r> <w:t xml:space=\"preserve\">Hello</w:t> </w:r> </w:p> </w:body>")
   end
+
+  it "conserves lits" do
+    html = '<html><head></head><body><ul><li>Hello</li><li>World</li></ul></body></html>'
+    compare_resulting_wordml_with_expected(html, "<w:body> <w:p> <w:pPr> <w:pStyle w:val=\"ListParagraph\"/> </w:pPr> <w:r> <w:t xml:space=\"preserve\">Hello</w:t> </w:r> </w:p> <w:p> <w:pPr> <w:pStyle w:val=\"ListParagraph\"/> </w:pPr> <w:r> <w:t xml:space=\"preserve\">World</w:t> </w:r> </w:p> </w:body>")
+  end
 end

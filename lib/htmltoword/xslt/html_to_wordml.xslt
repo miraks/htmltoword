@@ -91,6 +91,9 @@
 
   <xsl:template match="li">
     <w:p>
+      <w:pPr>
+        <w:pStyle w:val="ListParagraph"/>
+      </w:pPr>
       <w:r>
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
       </w:r>
