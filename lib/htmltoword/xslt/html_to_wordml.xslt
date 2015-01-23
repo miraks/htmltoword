@@ -93,6 +93,10 @@
     <w:p>
       <w:pPr>
         <w:pStyle w:val="ListParagraph"/>
+        <w:numPr>
+          <w:ilvl w:val="0"/>
+          <w:numId w:val="1"/>
+        </w:numPr>
       </w:pPr>
       <w:r>
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
